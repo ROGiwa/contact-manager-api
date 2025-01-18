@@ -5,6 +5,7 @@ const app = express();
 
 const port = process.env.PORT;
 
+app.use(express.json());
 app.use('/api/contacts', require('./routes/contactRoutes'))
 
 app.listen(port, () => {
